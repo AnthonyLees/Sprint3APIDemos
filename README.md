@@ -18,7 +18,7 @@ full_name (string)
 password (string)
 phone_number (string)
 
-2. user_lists:
+2. user_items:
 id (string)
 item_id (string)
 user_id (string)
