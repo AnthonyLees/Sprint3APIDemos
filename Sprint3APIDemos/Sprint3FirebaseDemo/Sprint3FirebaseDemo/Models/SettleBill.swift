@@ -14,17 +14,17 @@ struct SettleBill: Identifiable, Codable {
   @DocumentID var id: String?
   var balance: Int
   var bill_id: String
+  var bill_ower: String
+  var bill_payer: String
   var settled: Bool
-  var user_id1: String
-  var user_id2: String
   
   // MARK: Codable
   enum CodingKeys: String, CodingKey {
     case id
     case balance
     case bill_id
+    case bill_ower
+    case bill_payer
     case settled
-    case user_id1
-    case user_id2
   }
 }
