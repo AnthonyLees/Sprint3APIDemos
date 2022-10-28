@@ -66,6 +66,8 @@ struct ContentView: View {
             Text("Bill object")
             ForEach(bills) { bill in
               Text("id: " + bill.id!)
+              Text("bill_owers (shows id of each bill_ower): " + bill.bill_owers[0])
+              Text("bill_payers (shows id of each bill_payer): " + bill.bill_payers[0])
               Text("date: " + bill.date)
               Text("title: " + bill.title)
               Text("description: " + bill.description)
@@ -90,7 +92,7 @@ struct ContentView: View {
             Text("Bill List object")
             ForEach(bill_lists) { bill_list in
               Text("id: " + bill_list.id!)
-              Text("bills (shows bill_id of bill): " + bill_list.bills[0])
+              Text("bills (shows id of each bill): " + bill_list.bills[0])
               Text("user_id: " + bill_list.user_id )
             }
             Text("")
@@ -103,9 +105,9 @@ struct ContentView: View {
               Text("id: " + settle_bill.id!)
               Text("balance: " + String(settle_bill.balance))
               Text("bill_id: " + settle_bill.bill_id)
+              Text("bill_ower: " + settle_bill.bill_ower)
+              Text("bill_payer: " + settle_bill.bill_payer)
               Text("settled: " + String(settle_bill.settled))
-              Text("user_id1: " + settle_bill.user_id1)
-              Text("user_id2: " + settle_bill.user_id2)
             }
           }
           .font(.system(size: 12))
